@@ -7,8 +7,6 @@ class AlunniController
   public function index(Request $request, Response $response, $args){
     $db = Db::getInstance();
     $results = $db->select("alunni");
-    var_dump($results);
-    exit;
 
     if(count($results) > 0){
       $response->getBody()->write(json_encode($results));

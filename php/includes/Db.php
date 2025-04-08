@@ -15,7 +15,7 @@
     public function select($table, $where = 1){
         $query = "SELECT * FROM alunni";
         if($result = $this->query($query)){
-            return $result->fetch_array(MYSQLI_ASSOC);
+            return $result->fetch_all(MYSQLI_ASSOC);
         }
         return ["msg" => "C'e' stato un problema"];
     }

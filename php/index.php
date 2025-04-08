@@ -13,7 +13,7 @@ $app->get('/alunni/{id:\d+}', "AlunniController:show");
 
 $app->get('/alunni/{surname}', "AlunniController:search");
 
-$app->get('/alunni/sort/{column}:{order}', "AlunniController:showOrdered");
+$app->get('/alunni/sort/{column}:{order:\d{1}}', "AlunniController:showOrdered");
 
 $app->post('/alunni', "AlunniController:create");
 
